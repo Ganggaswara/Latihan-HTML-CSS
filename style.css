@@ -1,0 +1,51 @@
+body {
+    background-color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+.content {
+    display:flex;
+    gap: 10px;
+}
+.content div {
+    position: relative;
+    width: 40%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.content div img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: s ease;                                             
+}
+.content div:hover img {
+    transform: scale(1.5);
+}
+.content div .title-box {
+    content: "";
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0),#000 );
+    z-index: 1;
+    transform: translateY(50px);
+    transition: 0,5s ease;
+}
+.content div:hover .title,
+.content div:hover .title-box {
+    transform: translateY(0);
+}
+.content div .title {
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    z-index: 2;
+    bottom: 50px;
+    padding: 10px;
+    transform: translateY(50px);
+    transition: 1s ease;
+    cursor: pointer;
+}
